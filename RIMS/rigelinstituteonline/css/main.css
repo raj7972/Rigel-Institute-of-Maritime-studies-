@@ -112,8 +112,8 @@ body {
 }
 
 .btn {
-  width: 190px;
-  max-width: 190px;
+  /* width: 190px; */
+  min-width: 190px;
   padding: 10px 20px;
   border-radius: 0;
   white-space: nowrap;
@@ -1182,3 +1182,137 @@ header {
 .cross-info ul li:nth-child(4) {
   border-right: unset;
 }/*# sourceMappingURL=main.css.map */
+
+
+.seamanInfo-sec h6{justify-content: center;}
+.seamanInfo-sec p {
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 2rem;
+}
+.blist {
+    list-style: none;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.blist li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.875rem;
+    color: #1a2238;
+    font-family: Arial, sans-serif;
+}
+.blist li::before {
+    content: '✓';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e3f0fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #1e88e5;
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+
+
+.section_bg {
+    position: relative; /* required for overlay positioning */
+    background: url(../assets/background/bgImg-1.jpg);
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Overlay */
+.section_bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    z-index: 0;
+}
+
+/* Make sure content stays above overlay */
+.section_bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.card-content h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1c2a3a;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.card-content p {
+  color: #3d4f66;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.req-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8a9ab0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.req-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.req-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 13px;
+  color: #3d4f66;
+}
+
+.req-dot {
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+  background: #e8a020;
+  margin-top: 5px;
+}
+
+.card-tag {
+    display: inline-block;
+    background: rgba(26, 95, 168, 0.1);
+    color: #1a5fa8;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 11px 21px;
+    border-radius: 20px;
+    letter-spacing: 0.8px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
