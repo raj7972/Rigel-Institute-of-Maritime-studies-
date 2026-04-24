@@ -1316,3 +1316,85 @@ header {
     margin-bottom: 16px;
     text-transform: uppercase;
 }
+
+/* Add this CSS to your stylesheet */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 12px;
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #1a6fc4, #0ea5e9);
+  border-radius: 12px 0 0 12px;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(26, 111, 196, 0.12);
+  border-color: #c5d9f0;
+}
+
+.feature-card:hover::before {
+  transform: scaleY(1);
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e8f0fd, #dbeafe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a6fc4;
+  transition: background 0.25s ease;
+}
+
+.feature-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.feature-card:hover .feature-icon {
+  background: linear-gradient(135deg, #1a6fc4, #0ea5e9);
+  color: #ffffff;
+}
+
+.feature-text span {
+  font-size: 0.92rem;
+  color: #374151;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+/* Responsive: stack to 1 column on mobile */
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
