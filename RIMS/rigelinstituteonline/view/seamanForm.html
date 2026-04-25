@@ -15,106 +15,7 @@
     <link rel="stylesheet" href="../scss/lib/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <style>
-        .form-section {
-            background: #f5f7fa;
-            padding: 60px 0;
-        }
-
-        .form-wrapper {
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .form-wrapper h2 {
-            margin-bottom: 25px;
-            color: #1c2a3a;
-        }
-
-        /* Layout */
-        .form-row {
-            display: flex;
-            gap: 20px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 18px;
-            flex: 1;
-        }
-
-        .form-group label {
-            font-size: 13px;
-            margin-bottom: 6px;
-            color: #3d4f66;
-        }
-
-        .form-group span {
-            color: red;
-        }
-
-        /* Inputs */
-        input,
-        select {
-            padding: 10px 12px;
-            border: 1px solid #d5dce8;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        input:focus,
-        select:focus {
-            border-color: #1a5fa8;
-            outline: none;
-        }
-
-        /* File input */
-        input[type="file"] {
-            border: none;
-        }
-
-        /* Subtitle */
-        .form-subtitle {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #0a2240;
-        }
-
-        /* Terms */
-        .terms-box {
-            background: #eef1f6;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 13px;
-            color: #3d4f66;
-            margin-bottom: 15px;
-        }
-
-        .checkbox {
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Button */
-        .btn.primary {
-            background: #0a2240;
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .btn.primary:hover {
-            background: #0d2e56;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -218,144 +119,249 @@
         </section>
         <div class="spacer-15"></div>
         <section class="form-section">
-            <div class="container">
-                <div class="form-wrapper">
+  <div class="container">
+    <div class="form-card">
+      <div class="form-card__header">
+        <h2>Seaman Book Application</h2>
+        <p>Complete all required fields and upload your supporting documents</p>
+      </div>
 
-                    <h2>Seaman Book Application</h2>
+      <div class="form-card__body">
+        <form>
 
-                    <form>
+          <!-- Step 1: Book Type -->
+          <div class="form-step">
+            <div class="form-step__dot">1</div>
+            <span>Book type</span>
+          </div>
 
-                        <!-- Type -->
-                        <div class="form-group">
-                            <label>Type of Seaman Book <span>*</span></label>
-                            <select required>
-                                <option value="">Select Type</option>
-                                <option>Liberia Seaman Book</option>
-                                <option>Panama Seaman Book</option>
-                                <option>Bahamas Seaman Book</option>
-
-                            </select>
-                        </div>
-
-                        <!-- Name -->
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>First Name</label>
-                                <input type="text" placeholder="First Name">
-                            </div>
-                            <div class="form-group">
-                                <label>Last Name</label>
-                                <input type="text" placeholder="Last Name">
-                            </div>
-                        </div>
-
-                        <!-- Address -->
-                        <div class="form-group">
-                            <label>Street Address</label>
-                            <input type="text">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Address Line 2</label>
-                            <input type="text">
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>City</label>
-                                <input type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>State/Region</label>
-                                <input type="text">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Postal Code</label>
-                                <input type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>Country</label>
-                                <input type="text">
-                            </div>
-                        </div>
-
-                        <!-- Contact -->
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Nationality</label>
-                                <input type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>Position</label>
-                                <input type="text">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Phone <span>*</span></label>
-                                <input type="tel" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email <span>*</span></label>
-                                <input type="email" required>
-                            </div>
-                        </div>
-
-                        <!-- File Uploads -->
-                        <h4 class="form-subtitle">Documents</h4>
-
-                        <div class="form-group">
-                            <label>Passport</label>
-                            <input type="file">
-                        </div>
-
-                        <div class="form-group">
-                            <label>STCW Certificates</label>
-                            <input type="file">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Medical Fitness Certificate</label>
-                            <input type="file">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Proof of Sea Service / Employment Contract</label>
-                            <input type="file">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Additional File (optional)</label>
-                            <input type="file">
-                        </div>
-
-                        <!-- Terms -->
-                        <div class="terms-box">
-                            <h5>Seaman Book Application – Terms and Conditions</h5>
-                            <p>
-                                By submitting this form, you agree that all information provided is accurate,
-                                you meet eligibility requirements, and you accept that processing times and
-                                approval depend on authorities. Fees are non-refundable, and your data will
-                                be handled securely for processing purposes.
-                            </p>
-                        </div>
-
-                        <div class="form-group checkbox">
-                            <input type="checkbox" required>
-                            <label>I accept the Terms and Conditions</label>
-                        </div>
-
-                        <!-- Submit -->
-                        <button type="submit" class="btn primary">Submit</button>
-
-                    </form>
-                </div>
+          <div class="form-group">
+            <label>Type of Seaman Book <span class="req">*</span></label>
+            <div class="type-chips">
+                <div class="chip" onclick="selectChip(this)">Liberia Seaman Book</div>
+              <div class="chip active" onclick="selectChip(this)">Panama Seaman Book</div>
+              <div class="chip" onclick="selectChip(this)">Bahamas Seaman Book</div>
             </div>
-        </section>
+            <input type="hidden" id="book-type" value="Panama Seaman Book">
+          </div>
+
+          <!-- Step 2: Personal Info -->
+          <div class="form-step">
+            <div class="form-step__dot">2</div>
+            <span>Personal information</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Street Address</label>
+            <input type="text" placeholder="123 Main Street">
+          </div>
+
+          <div class="form-group">
+            <label>Address Line 2</label>
+            <input type="text" placeholder="Apt, suite, unit (optional)">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" placeholder="City">
+            </div>
+            <div class="form-group">
+              <label>State / Region</label>
+              <input type="text" placeholder="State or region">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Postal Code</label>
+              <input type="text" placeholder="00000">
+            </div>
+            <div class="form-group">
+              <label>Country</label>
+              <input type="text" placeholder="Country">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nationality</label>
+              <input type="text" placeholder="Nationality">
+            </div>
+            <div class="form-group">
+              <label>Position / Rank</label>
+              <input type="text" placeholder="e.g. Chief Officer">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone <span class="req">*</span></label>
+              <input type="tel" placeholder="+1 000 000 0000" required>
+            </div>
+            <div class="form-group">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" placeholder="name@example.com" required>
+            </div>
+          </div>
+
+          <!-- Step 3: Documents -->
+          <div class="form-step">
+            <div class="form-step__dot">3</div>
+            <span>Documents</span>
+          </div>
+
+          <!-- Passport -->
+          <div class="form-group">
+            <label>Passport <span class="req">*</span></label>
+            <label class="file-area" for="file-0">
+              <div class="file-icon">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7L9 1Z" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 1v6h6" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="file-meta">
+                <strong>Click to upload</strong>
+                <small>PDF, JPG or PNG · Max 10MB</small>
+                <div class="file-chosen" id="chosen-0"></div>
+              </div>
+              <input type="file" id="file-0" accept=".pdf,.jpg,.jpeg,.png" onchange="showFile(this,'chosen-0')">
+            </label>
+          </div>
+
+          <!-- STCW Certificates -->
+          <div class="form-group">
+            <label>STCW Certificates <span class="req">*</span></label>
+            <label class="file-area" for="file-1">
+              <div class="file-icon">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7L9 1Z" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 1v6h6" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="file-meta">
+                <strong>Click to upload</strong>
+                <small>PDF, JPG or PNG · Max 10MB</small>
+                <div class="file-chosen" id="chosen-1"></div>
+              </div>
+              <input type="file" id="file-1" accept=".pdf,.jpg,.jpeg,.png" onchange="showFile(this,'chosen-1')">
+            </label>
+          </div>
+
+          <!-- Medical Fitness Certificate -->
+          <div class="form-group">
+            <label>Medical Fitness Certificate <span class="req">*</span></label>
+            <label class="file-area" for="file-2">
+              <div class="file-icon">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7L9 1Z" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 1v6h6" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="file-meta">
+                <strong>Click to upload</strong>
+                <small>PDF, JPG or PNG · Max 10MB</small>
+                <div class="file-chosen" id="chosen-2"></div>
+              </div>
+              <input type="file" id="file-2" accept=".pdf,.jpg,.jpeg,.png" onchange="showFile(this,'chosen-2')">
+            </label>
+          </div>
+
+          <!-- Proof of Sea Service -->
+          <div class="form-group">
+            <label>Proof of Sea Service / Employment Contract <span class="req">*</span></label>
+            <label class="file-area" for="file-3">
+              <div class="file-icon">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7L9 1Z" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 1v6h6" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="file-meta">
+                <strong>Click to upload</strong>
+                <small>PDF, JPG or PNG · Max 10MB</small>
+                <div class="file-chosen" id="chosen-3"></div>
+              </div>
+              <input type="file" id="file-3" accept=".pdf,.jpg,.jpeg,.png" onchange="showFile(this,'chosen-3')">
+            </label>
+          </div>
+
+          <!-- Additional File -->
+          <div class="form-group">
+            <label>Additional File <span style="color:#9aa5b4; font-weight:400">(optional)</span></label>
+            <label class="file-area" for="file-4">
+              <div class="file-icon">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7L9 1Z" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 1v6h6" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="file-meta">
+                <strong>Click to upload</strong>
+                <small>PDF, JPG or PNG · Max 10MB</small>
+                <div class="file-chosen" id="chosen-4"></div>
+              </div>
+              <input type="file" id="file-4" accept=".pdf,.jpg,.jpeg,.png" onchange="showFile(this,'chosen-4')">
+            </label>
+          </div>
+
+          <!-- Step 4: Terms & Submit -->
+          <div class="form-step">
+            <div class="form-step__dot">4</div>
+            <span>Terms &amp; submit</span>
+          </div>
+
+          <div class="terms-box">
+            <strong>Seaman Book Application – Terms and Conditions</strong>
+            By submitting this form, you agree that all information provided is accurate,
+            you meet eligibility requirements, and you accept that processing times and
+            approval depend on authorities. Fees are non-refundable, and your data will
+            be handled securely for processing purposes.
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I accept the Terms and Conditions</label>
+          </div>
+
+          <div class="form-footer">
+            <p>Fields marked <span style="color:#e24b4a">*</span> are required</p>
+            <button type="submit" class="btn-submit">Submit Application</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function selectChip(el) {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('book-type').value = el.textContent.trim();
+  }
+
+  function showFile(input, chosenId) {
+    const el = document.getElementById(chosenId);
+    if (input.files && input.files[0]) {
+      el.textContent = input.files[0].name;
+      el.style.display = 'block';
+    }
+  }
+</script>
 
     </main>
     <footer>
