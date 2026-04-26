@@ -1223,9 +1223,8 @@ header {
 
 
 
-.section_bg {
-    position: relative; /* required for overlay positioning */
-    background: url(../assets/images/engineeImage.jpeg);
+.section_bg1,.section_bg2,.section_bg3,.section_bg4 {
+    position: relative;
     background-position: center;
     width: 100%;
     height: 500px;
@@ -1233,6 +1232,23 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
+}
+.section_bg1{
+    background: url(../assets/images/image1.jpg);
+}
+.section_bg2 {
+    background: url(../assets/images/image2.jpg);
+}
+.section_bg3 {
+    background: url(../assets/images/image3.jpg);
+}
+.section_bg4 {
+    background: url(../assets/images/engineeImage.jpeg);
+}
+
+.sectionImg{
+width: 100%;
+height: 500px;
 }
 
 /* Overlay */
@@ -1416,7 +1432,7 @@ header {
   }
 
   .form-card__header {
-    background: #0a2240;
+    background: #1e4284;
     padding: 2rem 2.5rem;
   }
 
@@ -1451,7 +1467,7 @@ header {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: #0a2240;
+    background: #1e4284;
     color: #fff;
     font-size: 11px;
     font-weight: 500;
@@ -1539,8 +1555,8 @@ header {
 
   .chip.active,
   .chip:hover {
-    background: #0a2240;
-    border-color: #0a2240;
+    background: #1e4284;
+    border-color: #1e4284;
     color: #fff;
   }
 
@@ -1627,7 +1643,7 @@ header {
   .checkbox-row input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    accent-color: #0a2240;
+    accent-color: #1e4284;
     cursor: pointer;
   }
 
@@ -1652,7 +1668,7 @@ header {
   }
 
   .btn-submit {
-    background: #0a2240;
+    background: #1e4284;
     color: #fff;
     border: none;
     padding: 11px 26px;
